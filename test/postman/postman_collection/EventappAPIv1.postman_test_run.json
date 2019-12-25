@@ -1,0 +1,1008 @@
+{
+	"id": "cf6ec559-14d6-4f37-b714-feace651920d",
+	"name": "Eventapp API  v1",
+	"allTests": [],
+	"timestamp": "2019-12-25T17:34:36.053Z",
+	"collection_id": "cef7b475-7bf4-4676-9c4a-ee0adb6dfb81",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "72f76eb1-5a75-4f17-b53f-50f98ade2407",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "cef7b475-7bf4-4676-9c4a-ee0adb6dfb81",
+		"name": "Eventapp API  v1",
+		"order": [
+			"f55dc54b-060d-41dd-bb87-45d9fc1059a6",
+			"54a03a2e-68a1-4d93-820a-f83b58f87337",
+			"3a97a695-6d7b-427f-a0a5-bcfe92f9b80c",
+			"9312a3c6-8ae9-4bf3-b1cc-d44db9673274",
+			"45c5aeec-08c2-4e32-9e49-abe2bf2716f7",
+			"fc66cdc6-ef7d-4ba0-a28d-2eb0f7f7d5a0",
+			"6a1925be-a360-47b6-b42c-2d7a325160b9",
+			"f0f9db3a-2918-4dba-bf6c-b1227e8051c6",
+			"4245cc99-ee6a-40ee-88ee-fe7a7ed614b4",
+			"bae10f6f-9489-400a-a6c1-629b1742e506",
+			"9ec16893-dc92-49df-af0e-a2e574508c95",
+			"0fee8aa1-e732-49f8-988e-c1da08663a7f",
+			"702b755c-5293-46be-aeaa-8ed0bab275ef",
+			"d4545243-64fb-4a74-b91b-3fc851131964",
+			"f5f78728-5b46-4f5b-85ed-49f72c8dea92",
+			"b93b84fc-0a65-495f-b10a-08aa80ecf039",
+			"7d8b7daf-e8ae-40f3-bdb0-09d537957dc0"
+		],
+		"folders_order": [],
+		"isFavorite": true
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "/v1/register",
+			"id": "f55dc54b-060d-41dd-bb87-45d9fc1059a6",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "CREATED",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"Schema is valid": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"128"
+			],
+			"allTests": [
+				{
+					"Schema is valid": true,
+					"Successful POST request": true
+				}
+			],
+			"time": "128",
+			"totalRequestTime": "128",
+			"iterationResults": {}
+		},
+		{
+			"name": "[TEST] /v1/register (Duplicate email)",
+			"id": "54a03a2e-68a1-4d93-820a-f83b58f87337",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 409,
+				"name": "CONFLICT",
+				"detail": {
+					"name": "Conflict",
+					"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+				}
+			},
+			"tests": {
+				"Status code is 409": true
+			},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"10"
+			],
+			"allTests": [
+				{
+					"Status code is 409": true
+				}
+			],
+			"time": "10",
+			"totalRequestTime": "10",
+			"iterationResults": {}
+		},
+		{
+			"name": "[TEST] /v1/register (Invalid email) ",
+			"id": "3a97a695-6d7b-427f-a0a5-bcfe92f9b80c",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 422,
+				"name": "UNPROCESSABLE ENTITY",
+				"detail": {
+					"name": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"detail": "The request was well-formed but was unable to be followed due to semantic errors."
+				}
+			},
+			"tests": {
+				"Status code is 422": true
+			},
+			"testPassFailCounts": {
+				"Status code is 422": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"12"
+			],
+			"allTests": [
+				{
+					"Status code is 422": true
+				}
+			],
+			"time": "12",
+			"totalRequestTime": "12",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/users",
+			"id": "9312a3c6-8ae9-4bf3-b1cc-d44db9673274",
+			"url": "http://127.0.0.1:5000/v1/users",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"27"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "27",
+			"totalRequestTime": "27",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/event",
+			"id": "45c5aeec-08c2-4e32-9e49-abe2bf2716f7",
+			"url": "http://127.0.0.1:5000/v1/event",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "CREATED",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"Schema is valid": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"30"
+			],
+			"allTests": [
+				{
+					"Schema is valid": true,
+					"Successful POST request": true
+				}
+			],
+			"time": "30",
+			"totalRequestTime": "30",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/event/<int:event_id>",
+			"id": "fc66cdc6-ef7d-4ba0-a28d-2eb0f7f7d5a0",
+			"url": "http://127.0.0.1:5000/v1/event/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"15"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "15",
+			"totalRequestTime": "15",
+			"iterationResults": {}
+		},
+		{
+			"name": "[TEST] /v1/event/1 (event_id not found)",
+			"id": "6a1925be-a360-47b6-b42c-2d7a325160b9",
+			"url": "http://127.0.0.1:5000/v1/event/0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"10"
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			],
+			"time": "10",
+			"totalRequestTime": "10",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/subscribe",
+			"id": "f0f9db3a-2918-4dba-bf6c-b1227e8051c6",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "CREATED",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"Schema is valid": true,
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"25"
+			],
+			"allTests": [
+				{
+					"Schema is valid": true,
+					"Status code is 201": true
+				}
+			],
+			"time": "25",
+			"totalRequestTime": "25",
+			"iterationResults": {}
+		},
+		{
+			"name": "[Test] /v1/subscribe (Non-registered )",
+			"id": "4245cc99-ee6a-40ee-88ee-fe7a7ed614b4",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 409,
+				"name": "CONFLICT",
+				"detail": {
+					"name": "Conflict",
+					"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+				}
+			},
+			"tests": {
+				"Status code is 409": true
+			},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"13"
+			],
+			"allTests": [
+				{
+					"Status code is 409": true
+				}
+			],
+			"time": "13",
+			"totalRequestTime": "13",
+			"iterationResults": {}
+		},
+		{
+			"name": "[Test] /v1/subscribe (Invalid event ID)",
+			"id": "bae10f6f-9489-400a-a6c1-629b1742e506",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 409,
+				"name": "CONFLICT",
+				"detail": {
+					"name": "Conflict",
+					"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+				}
+			},
+			"tests": {
+				"Status code is 409": true
+			},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"11"
+			],
+			"allTests": [
+				{
+					"Status code is 409": true
+				}
+			],
+			"time": "11",
+			"totalRequestTime": "11",
+			"iterationResults": {}
+		},
+		{
+			"name": "[Test] /v1/subscribe (Duplicate subscriptions)",
+			"id": "9ec16893-dc92-49df-af0e-a2e574508c95",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 409,
+				"name": "CONFLICT",
+				"detail": {
+					"name": "Conflict",
+					"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+				}
+			},
+			"tests": {
+				"Status code is 409": true
+			},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"17"
+			],
+			"allTests": [
+				{
+					"Status code is 409": true
+				}
+			],
+			"time": "17",
+			"totalRequestTime": "17",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/events",
+			"id": "0fee8aa1-e732-49f8-988e-c1da08663a7f",
+			"url": "http://127.0.0.1:5000/v1/events",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"7"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "7",
+			"totalRequestTime": "7",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/subscribe/users",
+			"id": "702b755c-5293-46be-aeaa-8ed0bab275ef",
+			"url": "http://127.0.0.1:5000/v1/subscribe/users",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"8"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "8",
+			"totalRequestTime": "8",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/subscribe",
+			"id": "d4545243-64fb-4a74-b91b-3fc851131964",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"15"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "15",
+			"totalRequestTime": "15",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/event/<int:event_id>",
+			"id": "f5f78728-5b46-4f5b-85ed-49f72c8dea92",
+			"url": "http://127.0.0.1:5000/v1/event/1",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"15"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "15",
+			"totalRequestTime": "15",
+			"iterationResults": {}
+		},
+		{
+			"name": "/v1/register [Delete user registeration]",
+			"id": "b93b84fc-0a65-495f-b10a-08aa80ecf039",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Schema is valid": true,
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"18"
+			],
+			"allTests": [
+				{
+					"Schema is valid": true,
+					"Successful POST request": true
+				}
+			],
+			"time": "18",
+			"totalRequestTime": "18",
+			"iterationResults": {}
+		},
+		{
+			"name": "[Test] /v1/register (Delete invalid email)",
+			"id": "7d8b7daf-e8ae-40f3-bdb0-09d537957dc0",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 422,
+				"name": "UNPROCESSABLE ENTITY",
+				"detail": {
+					"name": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"detail": "The request was well-formed but was unable to be followed due to semantic errors."
+				}
+			},
+			"tests": {
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Successful POST request": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 21,
+	"totalFail": 0,
+	"totalTime": 367,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "/v1/register",
+			"id": "f55dc54b-060d-41dd-bb87-45d9fc1059a6",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 201,
+				"name": "CREATED",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "[TEST] /v1/register (Duplicate email)",
+			"id": "54a03a2e-68a1-4d93-820a-f83b58f87337",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 409,
+				"name": "CONFLICT",
+				"detail": {
+					"name": "Conflict",
+					"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "[TEST] /v1/register (Invalid email) ",
+			"id": "3a97a695-6d7b-427f-a0a5-bcfe92f9b80c",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 422,
+				"name": "UNPROCESSABLE ENTITY",
+				"detail": {
+					"name": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"detail": "The request was well-formed but was unable to be followed due to semantic errors."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 422": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/users",
+			"id": "9312a3c6-8ae9-4bf3-b1cc-d44db9673274",
+			"url": "http://127.0.0.1:5000/v1/users",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/event",
+			"id": "45c5aeec-08c2-4e32-9e49-abe2bf2716f7",
+			"url": "http://127.0.0.1:5000/v1/event",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 201,
+				"name": "CREATED",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/event/<int:event_id>",
+			"id": "fc66cdc6-ef7d-4ba0-a28d-2eb0f7f7d5a0",
+			"url": "http://127.0.0.1:5000/v1/event/1",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "[TEST] /v1/event/1 (event_id not found)",
+			"id": "6a1925be-a360-47b6-b42c-2d7a325160b9",
+			"url": "http://127.0.0.1:5000/v1/event/0",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 404,
+				"name": "NOT FOUND",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/subscribe",
+			"id": "f0f9db3a-2918-4dba-bf6c-b1227e8051c6",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 201,
+				"name": "CREATED",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "[Test] /v1/subscribe (Non-registered )",
+			"id": "4245cc99-ee6a-40ee-88ee-fe7a7ed614b4",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 409,
+				"name": "CONFLICT",
+				"detail": {
+					"name": "Conflict",
+					"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "[Test] /v1/subscribe (Invalid event ID)",
+			"id": "bae10f6f-9489-400a-a6c1-629b1742e506",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 409,
+				"name": "CONFLICT",
+				"detail": {
+					"name": "Conflict",
+					"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "[Test] /v1/subscribe (Duplicate subscriptions)",
+			"id": "9ec16893-dc92-49df-af0e-a2e574508c95",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 409,
+				"name": "CONFLICT",
+				"detail": {
+					"name": "Conflict",
+					"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/events",
+			"id": "0fee8aa1-e732-49f8-988e-c1da08663a7f",
+			"url": "http://127.0.0.1:5000/v1/events",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/subscribe/users",
+			"id": "702b755c-5293-46be-aeaa-8ed0bab275ef",
+			"url": "http://127.0.0.1:5000/v1/subscribe/users",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/subscribe",
+			"id": "d4545243-64fb-4a74-b91b-3fc851131964",
+			"url": "http://127.0.0.1:5000/v1/subscribe",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/event/<int:event_id>",
+			"id": "f5f78728-5b46-4f5b-85ed-49f72c8dea92",
+			"url": "http://127.0.0.1:5000/v1/event/1",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/v1/register [Delete user registeration]",
+			"id": "b93b84fc-0a65-495f-b10a-08aa80ecf039",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "[Test] /v1/register (Delete invalid email)",
+			"id": "7d8b7daf-e8ae-40f3-bdb0-09d537957dc0",
+			"url": "http://127.0.0.1:5000/v1/register",
+			"time": "2019-12-25T17:34:36.053Z",
+			"responseCode": {
+				"code": 422,
+				"name": "UNPROCESSABLE ENTITY",
+				"detail": {
+					"name": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"detail": "The request was well-formed but was unable to be followed due to semantic errors."
+				}
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
