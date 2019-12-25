@@ -62,7 +62,3 @@ https://www.getpostman.com/downloads/
 
 ![Postman](https://raw.githubusercontent.com/sidlinux22/eventapp-api/master/test/postman/postman_collection/EventappAPIv1postmapcollection.png)
 
-
-
-
-## Troubleshooting
