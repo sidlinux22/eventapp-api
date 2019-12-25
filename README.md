@@ -25,10 +25,11 @@
 Postman API documentaion here :
 https://documenter.getpostman.com/view/9898598/SWLZfAV5?version=latest#9312a3c6-8ae9-4bf3-b1cc-d44db9673274
 
+![API endpoints](https://raw.githubusercontent.com/sidlinux22/eventapp-api/master/docs/Api-endpoints.png)
 
 ###  Database Design
 
-![DB Design](https://raw.githubusercontent.com/sidlinux22/eventapp-api/master/dbdesign.png)
+![DB Design](https://raw.githubusercontent.com/sidlinux22/eventapp-api/master/docs/dbdesign.png)
 
 ref : https://flask-sqlalchemy.palletsprojects.com/en/2.x/models/
 
@@ -59,7 +60,7 @@ https://www.getpostman.com/downloads/
 
 3. Collection Runner Test
 
-![Postman](https://raw.githubusercontent.com/sidlinux22/eventapp-api/master/postman/postman_collection/EventappAPIv1postmapcollection.png)
+![Postman](https://raw.githubusercontent.com/sidlinux22/eventapp-api/master/test/postman/postman_collection/EventappAPIv1postmapcollection.png)
 
 
 
